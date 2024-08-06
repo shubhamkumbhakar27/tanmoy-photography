@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,10 +24,93 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.wavy {
+  position: relative;
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+.wavy span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  animation: animate 2s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-30px);
+  }
+  40%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 320px) {
+  .wavy span {
+    font-size: 110%;
+  }
+}
+@media (max-width: 224px) {
+  .wavy span {
+    font-size: 80%;
+  }
+}
+@media (max-width: 205px) {
+  .wavy span {
+    font-size: 70%;
+  }
+}
+@media (max-width: 185px) {
+  .wavy span {
+    font-size: 50%;
+  }
+}
+
+.about {
+  background-color: rgba(140, 140, 140, 0.1);
+
+  line-height: 5%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: no-wrap;
+}
+
+.div1 {
+  width: 30vw;
+  line-height: 200%;
+}
+.div2 {
+  margin: 35px;
+  width: 60vw;
+  line-height: normal;
+  text-align: justify;
+}
+
+.para {
+  font-size: 30px;
+  font-family: "Markazi Text", serif;
+  transform: translateY(-15px);
+}
+
+.profile-pic {
+  align-self: center;
+  height: 175px;
+  border-radius: 50%;
+  border: 5px solid white;
 }
