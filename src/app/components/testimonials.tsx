@@ -41,7 +41,7 @@ const TestimonialCard = ({ name, role, image, quote }: any) => (
         className="rounded-full"
       />
     </div>
-    <p className="text-gray-600 italic mb-4">"{quote}"</p>
+    <p className="text-gray-600 italic mb-4">{quote}</p>
     <h3 className="font-semibold text-lg">{name}</h3>
     <p className="text-gray-500">{role}</p>
   </div>
