@@ -6,28 +6,33 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
+import Link from "next/link";
 export default function Navbar() {
   return (
-    <div className="h-24 bg-white/50 flex justify-between items-center px-32 fixed w-full z-20">
-      <div className="h-24 flex items-center">
-        <Image
-          src="https://static.vecteezy.com/system/resources/thumbnails/027/971/388/small_2x/3d-render-round-warm-orange-fire-flame-icon-realistic-hot-sparks-light-gas-logo-design-for-emoticon-energy-power-ui-png.png"
-          alt="Picture of the author"
-          width={70}
-          height={70}
-        />
-      </div>
-
-      <div className="w-3/5 items-center flex justify-end gap-24 px-12">
-        <div>
-          <a href="/portfolio">
-            <p className="text-lg text-gray-500 font-bold">PORTFOLIO</p>
-          </a>
-        </div>
-        <div>
-          <a href="/contact-us">
-            <p className="text-lg text-gray-500 font-bold">REACH OUT</p>
-          </a>
+    <div className="bg-white/50 p-4 fixed w-full h-24 flex justify-between z-30">
+      <div className="container mx-auto flex justify-between items-center border">
+        <Link href="/" className="text-white font-bold text-xl">
+          <div className="relative h-32 w-32">
+            <Image
+              src={require("../../../public/images/logo.png")}
+              alt="Tanmoy Photography"
+              fill
+            />
+          </div>
+        </Link>
+        <div className="space-x-4 md:space-x-8 pr-4">
+          <Link
+            href="#portfolio"
+            className="text-sm md:text-md text-gray-500 hover:text-gray-700"
+          >
+            PORTFOLIO
+          </Link>
+          <Link
+            href="#contact-us"
+            className="text-sm md:text-md text-gray-500 hover:text-gray-700"
+          >
+            REACH OUT
+          </Link>
         </div>
       </div>
     </div>

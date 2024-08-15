@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="bg-black/80 text-white">
+    <footer className="bg-black/80 text-white" id="contact-us">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-between">
           {/* Our Services Column */}
