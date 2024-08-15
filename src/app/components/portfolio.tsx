@@ -9,13 +9,13 @@ const PORTFOLIO_IMAGES = [
   require("../../../public/images/portfolio/2.jpg"),
   require("../../../public/images/portfolio/3.jpg"),
   require("../../../public/images/portfolio/4.jpg"),
-  require("../../../public/images/portfolio/5.jpg"),
+  require("../../../public/images/portfolio/5.JPG"),
   require("../../../public/images/portfolio/1.jpg"),
   require("../../../public/images/portfolio/2.jpg"),
   require("../../../public/images/portfolio/3.jpg"),
   require("../../../public/images/varansi_bg.jpeg"),
   require("../../../public/images/portfolio/4.jpg"),
-  require("../../../public/images/portfolio/5.jpg"),
+  require("../../../public/images/portfolio/5.JPG"),
 ];
 
 const PhotographyPortfolio = () => {
