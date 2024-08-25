@@ -1,7 +1,8 @@
 import About from "./components/about";
-import Banner from "./components/banner";
-import BannerCarousel from "./components/banner-carousel";
+import Blogs from "./components/blogs";
+import FilmCategories from "./components/films";
 import Footer from "./components/footer";
+import GetQuote from "./components/get-quote";
 import { HomePage } from "./components/home";
 import Navbar from "./components/navbar";
 import PhotographyPortfolio from "./components/portfolio";
@@ -12,15 +13,13 @@ export default function Home() {
     <>
       <Navbar />
       <HomePage />
-
-      {/* <Banner /> */}
-      {/* <BannerCarousel /> */}
-      {/* <div className="h-24 bg-orange-50" /> */}
       <About />
       <PhotographyPortfolio />
-
-      <div className="h-24 bg-orange-50" />
+      <FilmCategories />
+      <Blogs />
       <Testimonials />
+      <GetQuote />
+
       <Footer />
     </>
   );

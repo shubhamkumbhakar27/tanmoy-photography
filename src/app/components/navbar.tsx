@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
@@ -8,6 +9,17 @@ const roboto = Roboto({
 
 import Link from "next/link";
 export default function Navbar() {
+  const smoothScroll = (e: any, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80, // Adjust for navbar height
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="bg-white/50 p-4 fixed w-full h-24 flex justify-between z-30">
       <div className="container mx-auto flex justify-between items-center border">
@@ -24,12 +36,14 @@ export default function Navbar() {
           <Link
             href="#portfolio"
             className="text-sm md:text-md text-gray-500 hover:text-gray-700"
+            onClick={(e) => smoothScroll(e, "portfolio")}
           >
             PORTFOLIO
           </Link>
           <Link
             href="#contact-us"
             className="text-sm md:text-md text-gray-500 hover:text-gray-700"
+            onClick={(e) => smoothScroll(e, "contact-us")}
           >
             REACH OUT
           </Link>

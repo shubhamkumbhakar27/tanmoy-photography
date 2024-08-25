@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Heading from "./heading";
 
 const PORTFOLIO_IMAGES = [
   require("../../../public/images/varansi_bg.jpeg"),
@@ -28,13 +29,7 @@ const PhotographyPortfolio = () => {
 
   return (
     <div className="container mx-auto px-4 py-8" id="portfolio">
-      <div className="flex items-center justify-center w-full my-8">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <h2 className="mx-4 text-2xl font-semibold text-center text-gray-600">
-          Portfolio
-        </h2>
-        <div className="flex-grow border-t border-gray-300"></div>
-      </div>
+      <Heading title="Photography Portfolio" />
       <div className="h-[200vh] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {PORTFOLIO_IMAGES.map((image, index) => {
           const size = getRandomSize();
@@ -45,7 +40,7 @@ const PhotographyPortfolio = () => {
                 ${size === "small" ? "col-span-1 row-span-1" : ""}
                 ${
                   size === "medium"
-                    ? "col-span-1 row-span-2 sm:col-span-2 sm:row-span-1"
+                    ? "col-span-1 row-span-2 sm:col-span-1 sm:row-span-1"
                     : ""
                 }
                 ${

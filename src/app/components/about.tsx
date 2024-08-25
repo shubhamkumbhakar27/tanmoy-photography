@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useInView, useAnimation } from "framer-motion";
+import Heading from "./heading";
 
 const AboutUs = () => {
   const controls = useAnimation();
@@ -53,13 +54,7 @@ const AboutUs = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <div className="flex items-center justify-center w-full my-8">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <h2 className="mx-4 text-2xl font-semibold text-center text-gray-600">
-          About Tanmoy Photography
-        </h2>
-        <div className="flex-grow border-t border-gray-300"></div>
-      </div>
+      <Heading title="About Tanmoy Photography" />
       <motion.div
         ref={ref}
         variants={containerVariants}
