@@ -32,6 +32,12 @@ const nextConfig = {
         port: "",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "scontent.fblr1-5.fna.fbcdn.net",
+        port: "",
+        pathname: "**",
+      },
     ],
   },
 };
