@@ -16,9 +16,10 @@ export default function Home() {
       <About />
       <PhotographyPortfolio />
       <FilmCategories />
-      <Blogs />
+
       <Testimonials />
-      <GetQuote />
+      <Blogs />
+      {/* <GetQuote /> */}
 
       <Footer />
     </>

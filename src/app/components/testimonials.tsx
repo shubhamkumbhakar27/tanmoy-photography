@@ -1,67 +1,139 @@
+"use client";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Heading from "./heading";
 
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    role: "CEO, Company A",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ83xwhMsCLMOdS4a2YoNnZpBAQ_JdBHLZ14g&s",
-    quote:
-      "This service has transformed our business operations. Highly recommended!",
+    name: "Tanmoy & Suchismita",
+    image: require("../../../public/images/portfolio/3.jpg"),
+    text: "We couldn't be happier with our wedding photos! The photographer captured every special moment beautifully, from the intimate exchanges to the grand celebrations. Their artistic eye and professionalism made us feel completely at ease throughout the day. The resulting album tells the story of our wedding day perfectly, and we'll treasure these memories forever. Highly recommend for any couple looking for stunning, heartfelt photography.",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "Marketing Director, Company B",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq2q83JcZgPQfNlAnwAJkBJ-eS9OK7UUzJ5Q&s",
-    quote:
-      "The team's expertise and dedication are unmatched. A pleasure to work with!",
+    name: "Tanmoy & Suchismita",
+    image: require("../../../public/images/portfolio/4.jpg"),
+    text: "Choosing this photography service for our wedding was one of the best decisions we made. The attention to detail was impeccable, and they had an amazing ability to capture candid moments that truly reflected the joy and love of our special day. The photographer's creativity and use of natural light resulted in breathtaking images that far exceeded our expectations. We're so grateful for the beautiful memories they've given us.",
   },
-  {
-    id: 3,
-    name: "Alex Johnson",
-    role: "Freelance Designer",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDGBjBKY7glUXYb9c-6xuun0Fo2yYZNz-NA3o5Rg1rrKbmqfyOE1r2Q3lj2QL_wKXj2s&usqp=CAU",
-    quote:
-      "As a freelancer, this service has been a game-changer for my productivity.",
-  },
+  // Add more testimonials as needed
 ];
 
-const TestimonialCard = ({ name, role, image, quote }: any) => (
-  <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-    <div className="w-24 h-24 relative mb-4">
-      <Image
-        src={image}
-        alt={name}
-        layout="fill"
-        objectFit="cover"
-        className="rounded-full"
-      />
-    </div>
-    <p className="text-gray-600 italic mb-4">{quote}</p>
-    <h3 className="font-semibold text-lg">{name}</h3>
-    <p className="text-gray-500">{role}</p>
-  </div>
-);
+const TestimonialsSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-const Testimonials = () => {
+  const changeTestimonial = useCallback(
+    (newIndex: any) => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex(
+          typeof newIndex === "function" ? newIndex(currentIndex) : newIndex
+        );
+        setIsAnimating(false);
+      }, 500); // Match this with the CSS transition time
+    },
+    [currentIndex]
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeTestimonial((prevIndex: any) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 7000); // Change slide every 7 seconds
+
+    return () => clearInterval(interval);
+  }, [changeTestimonial]);
+
+  const goToPrevious = () => {
+    changeTestimonial((prevIndex: any) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    changeTestimonial((prevIndex: any) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          What Our Clients Say
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} {...testimonial} />
-          ))}
+        <Heading title="What Our Clients Say" />
+
+        <div className="relative max-w-6xl mx-auto">
+          <div className="flex items-center">
+            <button
+              onClick={goToPrevious}
+              className="absolute left-0 z-10 bg-transparent rounded-full p-2 shadow-sm hover:shadow-lg transition-colors"
+              aria-label="Previous testimonial"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <div
+              className={`flex-1 flex flex-col md:flex-row items-center transition-opacity duration-500 ${
+                isAnimating ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <div className="w-full md:w-1/3 mb-8 md:mb-0">
+                <div className="relative w-74 h-96 mx-auto overflow-hidden rounded-sm shadow-lg">
+                  <Image
+                    src={testimonials[currentIndex].image}
+                    alt={testimonials[currentIndex].name}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
+              <div className="w-full md:w-2/3 md:pl-12">
+                <blockquote className="text-sm italic mb-4 text-gray-500 text-justify">
+                  {testimonials[currentIndex].text}
+                </blockquote>
+                <p className="font-semibold text-right text-gray-600">
+                  - {testimonials[currentIndex].name}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={goToNext}
+              className="absolute right-0 z-10 bg-transparent rounded-full p-2 shadow-sm hover:shadow-lg transition-colors"
+              aria-label="Next testimonial"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Testimonials;
+export default TestimonialsSlider;
