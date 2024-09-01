@@ -6,6 +6,7 @@ import GetQuote from "./components/get-quote";
 import { HomePage } from "./components/home";
 import Navbar from "./components/navbar";
 import PhotographyPortfolio from "./components/portfolio";
+import SignatureWork from "./components/signature-work";
 import Testimonials from "./components/testimonials";
 
 export default function Home() {
@@ -14,11 +15,12 @@ export default function Home() {
       <Navbar />
       <HomePage />
       <About />
-      <PhotographyPortfolio />
-      <FilmCategories />
+      <SignatureWork />
+      {/* <PhotographyPortfolio />
+      <FilmCategories /> */}
 
       <Testimonials />
-      <Blogs />
+      {/* <Blogs /> */}
       <GetQuote />
 
       <Footer />

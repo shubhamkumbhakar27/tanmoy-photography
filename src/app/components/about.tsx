@@ -64,9 +64,9 @@ const AboutUs = () => {
       >
         <motion.div
           variants={imageVariants}
-          className="w-full md:w-1/3 mb-8 md:mb-0"
+          className="w-full md:w-1/3 mb-8 md:mb-0 z-10"
         >
-          <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl">
+          <div className="relative h-80 overflow-hidden shadow-xl md:translate-x-12">
             <Image
               src={require("../../../public/images/profile.jpg")}
               alt="About Us image"
@@ -75,7 +75,10 @@ const AboutUs = () => {
             />
           </div>
         </motion.div>
-        <motion.div variants={textVariants} className="w-full md:w-2/3 md:pl-8">
+        <motion.div
+          variants={textVariants}
+          className="w-full md:w-2/3 p-4 md:p-8 md:pl-20 bg-gray-100 shadow-xl"
+        >
           <p className="text-lg text-justify leading-relaxed text-gray-500">
             At Tanmoy Photography, we are a team of experienced and dedicated
             photographers with over a decade of expertise in capturing life’s

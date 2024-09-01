@@ -68,7 +68,7 @@ const TestimonialsSlider = () => {
             <button
               onClick={goToPrevious}
               className="absolute left-0 z-10 bg-transparent rounded-full p-2 shadow-sm hover:shadow-lg transition-colors"
-              aria-label="Previous testimonial"
+              aria-label="Previous"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const TestimonialsSlider = () => {
               }`}
             >
               <div className="w-full md:w-1/3 mb-8 md:mb-0">
-                <div className="relative w-74 h-96 mx-auto overflow-hidden rounded-sm shadow-lg">
+                <div className="relative w-74 h-[60vh] mx-auto overflow-hidden rounded-sm shadow-lg">
                   <Image
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
@@ -112,7 +112,7 @@ const TestimonialsSlider = () => {
             <button
               onClick={goToNext}
               className="absolute right-0 z-10 bg-transparent rounded-full p-2 shadow-sm hover:shadow-lg transition-colors"
-              aria-label="Next testimonial"
+              aria-label="Next"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  require("../../../public/images/home/1.jpg"),
   require("../../../public/images/home/2.jpg"),
   require("../../../public/images/home/3.jpg"),
   require("../../../public/images/home/4.jpg"),
@@ -17,7 +16,7 @@ export const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 3000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
