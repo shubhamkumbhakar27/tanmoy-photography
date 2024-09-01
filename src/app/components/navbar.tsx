@@ -186,6 +186,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
                     }
                     if (item.scroolToId) {
                       smoothScroll(e, item.scroolToId);
+                      setIsOpen(false);
                     }
                     if (item.dropdownItems) {
                       e.preventDefault();
