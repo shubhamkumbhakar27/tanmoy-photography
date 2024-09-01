@@ -5,6 +5,7 @@ import Navbar from "@/app/components/navbar";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
+import clsx from "clsx";
 const WEDDING = [
   {
     id: 1,
@@ -223,7 +224,14 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
       <div className="h-40" />
       <div className="container mx-auto px-4" id="portfolio">
         <Heading title={PORTFOLIO_MAP.get(params.id)?.heading} />
-        <div className="h-[400vh] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div
+          className={clsx(
+            " grid h-[200vh] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
+            {
+              "h-[400vh]": PORTFOLIO_MAP.get(params.id)?.images.length > 15,
+            }
+          )}
+        >
           {PORTFOLIO_MAP.get(params.id)?.images.map(
             (image: any, index: number) => {
               const size = randomSizes[index];

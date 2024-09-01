@@ -169,9 +169,24 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
             {navItems.map((item, index) => (
               <div key={index}>
                 <a
-                  href={item.href}
+                  href={
+                    selectedLabel
+                      ? "/"
+                      : item.dropdownItems || item.scroolToId
+                      ? undefined
+                      : item.href
+                  }
                   className="text-black hover:bg-white/20 px-3 py-2 rounded-md text-base font-medium flex justify-between items-center"
                   onClick={(e) => {
+                    if (selectedLabel) {
+                      return;
+                    }
+                    if (!item.href) {
+                      e.preventDefault();
+                    }
+                    if (item.scroolToId) {
+                      smoothScroll(e, item.scroolToId);
+                    }
                     if (item.dropdownItems) {
                       e.preventDefault();
                       toggleDropdown(index);
