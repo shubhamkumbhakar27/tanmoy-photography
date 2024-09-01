@@ -4,9 +4,12 @@ import Image from "next/image";
 import Heading from "./heading";
 
 const categories = [
-  { name: "Wedding", image: require("../../../public/images/home/2.jpg") },
-  { name: "Editorial", image: require("../../../public/images/home/3.jpg") },
-  { name: "Fashion", image: require("../../../public/images/home/4.jpg") },
+  { name: "Wedding", image: require("../../../public/images/portfolio/2.jpg") },
+  {
+    name: "Editorial",
+    image: require("../../../public/images/portfolio/3.jpg"),
+  },
+  { name: "Fashion", image: require("../../../public/images/portfolio/4.jpg") },
 ];
 
 const SignatureWork = () => {
