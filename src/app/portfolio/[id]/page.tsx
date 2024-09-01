@@ -68,7 +68,7 @@ const PRE_WEDDING = [
   {
     id: 8,
     title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/8.JPG"),
+    image_src: require("../../../../public/images/pre-wedding/8.jpg"),
   },
   {
     id: 9,
