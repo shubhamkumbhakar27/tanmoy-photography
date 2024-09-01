@@ -22,7 +22,7 @@ const WEDDING = [
   {
     id: 4,
     title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/5.jpg"),
+    image_src: require("../../../../public/images/portfolio/5.JPG"),
   },
 ];
 
@@ -45,7 +45,7 @@ const PRE_WEDDING = [
   {
     id: 4,
     title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/5.jpg"),
+    image_src: require("../../../../public/images/portfolio/5.JPG"),
   },
 ];
 
