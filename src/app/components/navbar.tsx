@@ -9,7 +9,8 @@ const roboto = Roboto({
 import { Menu, X, ChevronDown } from "lucide-react";
 
 import Link from "next/link";
-export default function Navbar() {
+import clsx from "clsx";
+export default function Navbar({ selectedLabel }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(-1);
 
@@ -88,15 +89,27 @@ export default function Navbar() {
             <div key={index} className="relative group">
               <a
                 href={
-                  item.dropdownItems || item.scroolToId ? undefined : item.href
+                  selectedLabel
+                    ? "/"
+                    : item.dropdownItems || item.scroolToId
+                    ? undefined
+                    : item.href
                 }
-                className="text-black hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className={clsx(
+                  "text-black hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium flex items-center",
+                  {
+                    "text-blue-200": selectedLabel === item.label,
+                  }
+                )}
                 onMouseOver={() => {
                   if (item.dropdownItems) {
                     toggleDropdown(index);
                   }
                 }}
                 onClick={(e) => {
+                  if (selectedLabel) {
+                    return;
+                  }
                   if (!item.href) {
                     e.preventDefault();
                   }

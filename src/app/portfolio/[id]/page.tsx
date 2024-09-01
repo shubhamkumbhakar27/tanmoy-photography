@@ -130,7 +130,7 @@ PORTFOLIO_MAP.set("product-shoot", {
 const Films = ({ params }: { params: { id: string } }) => {
   return (
     <>
-      <Navbar />
+      <Navbar selectedLabel="Portfolio" />
       <div className="h-40" />
       <div className="container mx-auto px-4">
         <section>
