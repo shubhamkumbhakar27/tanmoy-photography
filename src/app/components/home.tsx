@@ -8,7 +8,7 @@ const images = [
   require("../../../public/images/home/2.jpg"),
   require("../../../public/images/home/3.jpg"),
   require("../../../public/images/home/4.jpg"),
-  require("../../../public/images/home/5.JPG"),
+  require("../../../public/images/home/5.jpg"),
   require("../../../public/images/home/6.jpg"),
   require("../../../public/images/home/7.jpg"),
   require("../../../public/images/home/8.jpg"),

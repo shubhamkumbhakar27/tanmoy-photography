@@ -80,7 +80,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
           <p className="text-black text-xs text-center -translate-y-4">
             {`Tanmoy Photography`}
           </p>
-          <p className="text-black text-xs text-center -translate-y-4">{`and Films`}</p>
+          <p className="text-black text-xs text-center -translate-y-4">{`& Films`}</p>
         </Link>
 
         {/* Desktop menu */}
