@@ -4,10 +4,22 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
+  require("../../../public/images/home/1.jpg"),
   require("../../../public/images/home/2.jpg"),
   require("../../../public/images/home/3.jpg"),
   require("../../../public/images/home/4.jpg"),
   require("../../../public/images/home/5.JPG"),
+  require("../../../public/images/home/6.jpg"),
+  require("../../../public/images/home/7.jpg"),
+  require("../../../public/images/home/8.jpg"),
+  require("../../../public/images/home/9.jpg"),
+  require("../../../public/images/home/10.jpg"),
+  require("../../../public/images/home/11.jpg"),
+  require("../../../public/images/home/12.jpg"),
+  require("../../../public/images/home/13.jpg"),
+  require("../../../public/images/home/14.jpg"),
+  require("../../../public/images/home/15.jpg"),
+  require("../../../public/images/home/16.jpg"),
 ];
 
 export const HomePage = () => {
