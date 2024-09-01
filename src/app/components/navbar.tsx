@@ -10,7 +10,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 import Link from "next/link";
 import clsx from "clsx";
-export default function Navbar({ selectedLabel }: any) {
+export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(-1);
 
