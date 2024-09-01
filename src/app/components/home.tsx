@@ -24,9 +24,9 @@ export const HomePage = () => {
 
   return (
     <div>
-      <main className="container mx-auto px-4 md:p-0">
-        <div className="h-24" />
-        <div className="relative h-[80vh] overflow-hidden rounded-lg">
+      <main className="container mx-auto px-4 md:p-0" id="home">
+        <div className="h-40" />
+        <div className="relative h-[70vh] overflow-hidden">
           {images.map((image: string, index: number) => (
             <Image
               key={index}

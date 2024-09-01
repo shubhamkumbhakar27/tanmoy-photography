@@ -53,7 +53,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16" id="about-us">
       <Heading title="About Tanmoy Photography" />
       <motion.div
         ref={ref}
@@ -64,18 +64,18 @@ const AboutUs = () => {
       >
         <motion.div
           variants={imageVariants}
-          className="w-full md:w-1/2 mb-8 md:mb-0"
+          className="w-full md:w-1/3 mb-8 md:mb-0"
         >
-          <div className="relative h-80 overflow-hidden rounded-lg shadow-xl">
+          <div className="relative h-80 w-full overflow-hidden rounded-lg shadow-xl">
             <Image
-              src="https://scontent.fblr1-10.fna.fbcdn.net/v/t1.6435-9/84300361_177131030272730_5097741931102863360_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=zT7UmwRu54UQ7kNvgH83cxk&_nc_ht=scontent.fblr1-10.fna&oh=00_AYDCDEYsXYTyuPtbvv_Uhz3CevjXoEK_LK16SsjVVfPR2w&oe=66DA147B"
+              src={require("../../../public/images/profile.jpg")}
               alt="About Us image"
               layout="fill"
               objectFit="cover"
             />
           </div>
         </motion.div>
-        <motion.div variants={textVariants} className="w-full md:w-1/2 md:pl-8">
+        <motion.div variants={textVariants} className="w-full md:w-2/3 md:pl-8">
           <p className="text-lg text-justify leading-relaxed text-gray-500">
             At Tanmoy Photography, we are a team of experienced and dedicated
             photographers with over a decade of expertise in capturing life’s
