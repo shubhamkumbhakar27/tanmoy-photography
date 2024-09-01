@@ -59,7 +59,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
 
   return (
     <nav
-      className="bg-white/40 fixed w-full z-50 h-40 pt-4"
+      className="bg-white/40 fixed w-full z-20 h-40 pt-4"
       onMouseLeave={() => setActiveDropdown(-1)}
     >
       <div className="container mx-auto h-full flex justify-between items-center px-8">

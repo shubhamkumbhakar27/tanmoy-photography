@@ -28,13 +28,13 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "sunnydhiman.com",
+        hostname: "i.ytimg.com",
         port: "",
         pathname: "**",
       },
       {
         protocol: "https",
-        hostname: "scontent.fblr1-5.fna.fbcdn.net",
+        hostname: "i.ytimg.com",
         port: "",
         pathname: "**",
       },
