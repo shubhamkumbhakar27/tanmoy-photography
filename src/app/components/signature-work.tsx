@@ -3,13 +3,19 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Heading from "./heading";
 
-const categories = [
-  { name: "Wedding", image: require("../../../public/images/portfolio/2.jpg") },
+const signatures = [
+  {
+    name: "Wedding",
+    image: require("../../../public/images/signature/wedding.jpg"),
+  },
+  {
+    name: "Pre-Wedding",
+    image: require("../../../public/images/signature/pre-wedding.jpg"),
+  },
   {
     name: "Editorial",
-    image: require("../../../public/images/portfolio/3.jpg"),
+    image: require("../../../public/images/signature/editorial.jpg"),
   },
-  { name: "Fashion", image: require("../../../public/images/portfolio/4.jpg") },
 ];
 
 const SignatureWork = () => {
@@ -25,7 +31,7 @@ const SignatureWork = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        {categories.map((category, index) => (
+        {signatures.map((category, index) => (
           <div key={index} className="relative">
             <div className="">
               <span className="text-5xl font-thin text-gray-300 opacity-100">
@@ -52,7 +58,3 @@ const SignatureWork = () => {
 };
 
 export default SignatureWork;
-
-// <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-2">
-//   Categories
-// </h2>;

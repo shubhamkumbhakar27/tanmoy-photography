@@ -24,10 +24,6 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
         { label: "Pre-wedding", href: "/portfolio/pre-wedding" },
         { label: "Editorial", href: "/portfolio/editorial" },
         { label: "Baby Shoot", href: "/portfolio/baby-shoot" },
-        { label: "Fashion", href: "/portfolio/fashion" },
-        { label: "Meternity shoot", href: "/portfolio/meternity-shoot" },
-        { label: "Engagement", href: "/portfolio/engagement" },
-        { label: "Product Shoot", href: "/portfolio/product-shoot" },
       ],
     },
     {
