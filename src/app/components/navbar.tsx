@@ -91,14 +91,15 @@ export default function Navbar() {
                   item.dropdownItems || item.scroolToId ? undefined : item.href
                 }
                 className="text-black hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium flex items-center"
-                onMouseOver={(e) => {
-                  e.preventDefault();
+                onMouseOver={() => {
                   if (item.dropdownItems) {
                     toggleDropdown(index);
                   }
                 }}
                 onClick={(e) => {
-                  e.preventDefault();
+                  if (!item.href) {
+                    e.preventDefault();
+                  }
                   if (item.scroolToId) {
                     smoothScroll(e, item.scroolToId);
                   }
