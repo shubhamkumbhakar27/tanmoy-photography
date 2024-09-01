@@ -7,22 +7,21 @@ const blogs = [
     title: "Blog 1",
     author: "Tanmoy",
     excerpt: "This is the first blog post.",
-    thumbnailUrl: require("../../../public/images/portfolio/1.jpg"),
+    thumbnailUrl: require("../../../public/images/portfolio/2.jpg"),
   },
   {
     url: "https://www.facebook.com/tanmoyphotography93",
     title: "Blog 2",
     author: "Tanmoy",
     excerpt: "This is the second blog post.",
-    thumbnailUrl: require("../../../public/images/portfolio/2.jpg"),
+    thumbnailUrl: require("../../../public/images/portfolio/3.jpg"),
   },
   {
     url: "https://www.facebook.com/tanmoyphotography93",
     title: "Blog 3",
     author: "Tanmoy",
     excerpt: "This is the third blog post.",
-    thumbnailUrl:
-      "https://scontent.fblr1-5.fna.fbcdn.net/v/t39.30808-6/453219706_1077700100584027_6064853544635202362_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LznRDpaAUzcQ7kNvgF95npJ&_nc_ht=scontent.fblr1-5.fna&oh=00_AYCMnItJWhlpNNQJFAimzycfON4cCVHN141lN1MJwSn1eQ&oe=66D103D0",
+    thumbnailUrl: require("../../../public/images/portfolio/4.jpg"),
   },
 ];
 

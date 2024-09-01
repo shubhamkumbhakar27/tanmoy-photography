@@ -19,24 +19,24 @@ export default function Navbar() {
     {
       label: "Portfolio",
       dropdownItems: [
-        { label: "Wedding", href: "#" },
-        { label: "Pre-wedding", href: "#" },
-        { label: "Editorial", href: "#" },
-        { label: "Baby Shoot", href: "#" },
-        { label: "Fashion", href: "#" },
-        { label: "Meternity shoot", href: "#" },
-        { label: "Engagement", href: "#" },
-        { label: "Product Shoot", href: "#" },
+        { label: "Wedding", href: "/portfolio/wedding" },
+        { label: "Pre-wedding", href: "/portfolio/pre-wedding" },
+        { label: "Editorial", href: "/portfolio/editorial" },
+        { label: "Baby Shoot", href: "/portfolio/baby-shoot" },
+        { label: "Fashion", href: "/portfolio/fashion" },
+        { label: "Meternity shoot", href: "/portfolio/meternity-shoot" },
+        { label: "Engagement", href: "/porttfolio/engagement" },
+        { label: "Product Shoot", href: "/porttfolio/product-shoot" },
       ],
     },
     {
       label: "Films",
       dropdownItems: [
-        { label: "Wedding", href: "#" },
-        { label: "Pre-wedding", href: "#" },
+        { label: "Wedding", href: "/films/wedding" },
+        { label: "Pre-wedding", href: "/films/pre-wedding" },
       ],
     },
-    { label: "Blogs", href: "#" },
+    { label: "Blogs", href: "/blogs" },
     { label: "Contact", scroolToId: "contact-us" },
   ];
 
@@ -124,11 +124,11 @@ export default function Navbar() {
                     {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                       <a
                         key={dropdownIndex}
-                        href={dropdownItem.href}
+                        href={dropdownItem?.href}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                         role="menuitem"
                       >
-                        {dropdownItem.label}
+                        {dropdownItem!.label}
                       </a>
                     ))}
                   </div>
@@ -178,10 +178,10 @@ export default function Navbar() {
                     {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                       <a
                         key={dropdownIndex}
-                        href={dropdownItem.href}
+                        href={dropdownItem?.href}
                         className="text-black hover:bg-white/20 block px-3 py-2 rounded-md text-sm"
                       >
-                        {dropdownItem.label}
+                        {dropdownItem?.label}
                       </a>
                     ))}
                   </div>
