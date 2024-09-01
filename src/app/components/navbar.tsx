@@ -25,8 +25,8 @@ export default function Navbar() {
         { label: "Baby Shoot", href: "/portfolio/baby-shoot" },
         { label: "Fashion", href: "/portfolio/fashion" },
         { label: "Meternity shoot", href: "/portfolio/meternity-shoot" },
-        { label: "Engagement", href: "/porttfolio/engagement" },
-        { label: "Product Shoot", href: "/porttfolio/product-shoot" },
+        { label: "Engagement", href: "/portfolio/engagement" },
+        { label: "Product Shoot", href: "/portfolio/product-shoot" },
       ],
     },
     {
