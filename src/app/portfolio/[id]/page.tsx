@@ -25,7 +25,7 @@ const WEDDING = [
   {
     id: 4,
     title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/5.JPG"),
+    image_src: require("../../../../public/images/pre-wedding/5.jpg"),
   },
 ];
 
