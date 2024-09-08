@@ -63,6 +63,8 @@ const GetQuote = () => {
     service: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: any) => {
     e.preventDefault();
@@ -80,6 +82,7 @@ const GetQuote = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
+      setIsSubmitting(true);
       await fetch(
         "https://myserver-shubham.vercel.app/api/tanmoy-photography/new_lead",
         {
@@ -91,6 +94,7 @@ const GetQuote = () => {
         }
       );
       console.log("Form submitted:", formData);
+      setIsSubmitted(true);
       setFormData({
         name: "",
         phone: "",
@@ -100,6 +104,8 @@ const GetQuote = () => {
       });
     } catch (error) {
       console.error("error submitting form", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -204,7 +210,11 @@ const GetQuote = () => {
               className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white disabled:bg-orange-300 bg-orange-400"
               disabled={!formData.name || !formData.phone || !formData.service}
             >
-              Get Quote
+              {isSubmitting
+                ? "Submitting..."
+                : isSubmitted
+                ? "Submitted, we will reach you soon."
+                : "Get Quote"}
             </button>
           </div>
         </form>
