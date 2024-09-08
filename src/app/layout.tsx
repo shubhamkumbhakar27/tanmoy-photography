@@ -19,42 +19,50 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/profile.jpg",
+        url: require("../../public/images/logo.png"),
       },
     ],
   },
   icons: {
     icon: [
-      { url: "/images/logo.png" },
-      { url: "/images/logo.png", sizes: "16x16", type: "image/png" },
-      { url: "/images/logo.png", sizes: "32x32", type: "image/png" },
+      { url: require("../../public/images/logo.png") },
       {
-        url: "/images/logo.png",
+        url: require("../../public/images/logo.png"),
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: require("../../public/images/logo.png"),
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: require("../../public/images/logo.png"),
         sizes: "192x192",
         type: "image/png",
       },
     ],
     shortcut: [
       {
-        url: "/images/logo.png",
+        url: require("../../public/images/logo.png"),
         sizes: "192x192",
         type: "image/png",
       },
     ],
     apple: [
-      { url: "/images/logo.png", type: "image/png" },
+      { url: require("../../public/images/logo.png"), type: "image/png" },
       {
-        url: "/images/logo.png",
+        url: require("../../public/images/logo.png"),
         sizes: "152x152",
         type: "image/png",
       },
       {
-        url: "/images/logo.png",
+        url: require("../../public/images/logo.png"),
         sizes: "167x167",
         type: "image/png",
       },
       {
-        url: "/images/logo.png",
+        url: require("../../public/images/logo.png"),
         sizes: "180x180",
         type: "image/png",
       },
