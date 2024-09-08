@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="text-sm">Wedding Photography & Films</li>
               <li className="text-sm">Pre Wedding Photography & Films</li>
-              <li className="text-sm">Baby Shoot Photography</li>
+              <li className="text-sm">Baby Shoot</li>
             </ul>
           </div>
 
@@ -122,8 +122,12 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="w-full mb-1 mt-12">
+          <p className="text-gray-300 text-center">Made with ❤️ in India</p>
+        </div>
+
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-200 text-center text-xs">
+        <div className="mt-2 pt-4 border-t border-gray-200 text-center text-xs">
           <p>
             &copy; {new Date().getFullYear()} Tanmoy Photography & Films. All
             rights reserved.
