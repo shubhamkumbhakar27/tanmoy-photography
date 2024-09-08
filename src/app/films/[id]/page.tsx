@@ -127,27 +127,43 @@ const WEDDING_PLAYLIST = [
 const WEDDING_VIDEOS = [
   {
     id: "1",
-    youtubeId: "SGG8WxXsplo",
+    youtubeId: "Onp4_8L31po",
   },
   {
     id: "2",
-    youtubeId: "Kq_Tc_kjRb4",
+    youtubeId: "TtYQgkP6Uns",
   },
   {
     id: "3",
-    youtubeId: "BWT8vdf8Dnk",
+    youtubeId: "J2WiT8XtKo0",
   },
   {
     id: "4",
-    youtubeId: "fP8uDV13pa4",
-  },
-  {
-    id: "5",
     youtubeId: "JtXLpxlUy68",
   },
   {
+    id: "5",
+    youtubeId: "RZk_vRngWUE",
+  },
+  {
     id: "6",
-    youtubeId: "KQOmzlHAmzE",
+    youtubeId: "l1o--yXkDGk",
+  },
+  {
+    id: "7",
+    youtubeId: "xGgeJ7mnnFc",
+  },
+  {
+    id: "8",
+    youtubeId: "508JQU-7T0w",
+  },
+  {
+    id: "9",
+    youtubeId: "T6UdM5i7AVc",
+  },
+  {
+    id: "10",
+    youtubeId: "Z-qll-h2yjQ",
   },
 ];
 
