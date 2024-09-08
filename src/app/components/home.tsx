@@ -43,7 +43,7 @@ export const HomePage = () => {
               src={image}
               alt={`image ${index + 1}`}
               fill
-              objectFit="contain"
+              objectFit={"contain"}
               className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}

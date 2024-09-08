@@ -59,7 +59,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
 
   return (
     <nav
-      className="bg-white/40 fixed w-full z-20 h-40 pt-4"
+      className="bg-gray-100/70 fixed w-full z-20 h-40 pt-4"
       onMouseLeave={() => setActiveDropdown(-1)}
     >
       <div className="container mx-auto h-full flex justify-between items-center px-8">
@@ -85,7 +85,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
             <div key={index} className="relative group">
               <a
                 href={
-                  selectedLabel
+                  selectedLabel && selectedLabel !== item.label
                     ? "/"
                     : item.dropdownItems || item.scroolToId
                     ? undefined
@@ -164,7 +164,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/40 px-8">
+        <div className="md:hidden bg-gray-100/70 px-8">
           <div className="px-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item, index) => (
               <div key={index}>

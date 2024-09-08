@@ -1,139 +1,171 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Heading from "./heading";
 
-const testimonials = [
+const reviews = [
   {
     id: 1,
-    name: "Tanmoy & Suchismita",
-    image: require("../../../public/images/portfolio/3.jpg"),
-    text: "We couldn't be happier with our wedding photos! The photographer captured every special moment beautifully, from the intimate exchanges to the grand celebrations. Their artistic eye and professionalism made us feel completely at ease throughout the day. The resulting album tells the story of our wedding day perfectly, and we'll treasure these memories forever. Highly recommend for any couple looking for stunning, heartfelt photography.",
+    author: "Chandrima Chatterjee",
+    content: `Valo bole tmr kaj k boro korar khomota nei. Tobe Jotota korcho Just Osadharon, sorir k sustho rekhe ro onek valo korte hbe. God bless you abundantly. Tmk vogoban ei khomota diyeche j sobar sundor muhurto guloke jotne dhore rakhar, abar dekhe sei muhurte fire jabar sujog koriye debar.  💝`,
+    image: require("../../../public/images/home/1.jpg"),
   },
   {
     id: 2,
-    name: "Tanmoy & Suchismita",
-    image: require("../../../public/images/portfolio/4.jpg"),
-    text: "Choosing this photography service for our wedding was one of the best decisions we made. The attention to detail was impeccable, and they had an amazing ability to capture candid moments that truly reflected the joy and love of our special day. The photographer's creativity and use of natural light resulted in breathtaking images that far exceeded our expectations. We're so grateful for the beautiful memories they've given us.",
+    author: "Partha Sarathi Maji",
+    content: `Your work is so good that we both feel blessed. We'd like to work with you in the future.`,
+    image: require("../../../public/images/home/3.jpg"),
   },
-  // Add more testimonials as needed
+  {
+    id: 3,
+    author: "Anurab Roy",
+    content: `Tanmoy was the best photographer I have ever hired. On time. Followed through on everything he said he would do. Would highly recommend him to family, friends and business associates`,
+    image: require("../../../public/images/home/2.jpg"),
+  },
+  {
+    id: 4,
+    author: "Suman Paul",
+    content: `Pre-Wedding" photos & video, "Wedding-reception" photos & video all done very well by Tanmoy Da. We got the wedding album today. All the photos are arranged very nicely and the quality of the all page is amazing. Looking at the album pages, it seems that there will be no problem for life time. All in all the work has been very nice. 👌❤\nOne more thing must be said, that is since the booking, has become a good friendship with Tanmoy Da, like a family member. I will contact you again if I need photography in the future. Many wishes from my family for your good work. Keep up the good work in the future. 😊👍`,
+    image: require("../../../public/images/home/3.jpg"),
+  },
+  {
+    id: 5,
+    author: "Tiya Mondal",
+    content: `bhir me khoye ye chehere kaid kar tu lata hai,  bite hue hai ye manjar jo hume dikhlata hai,  char kono k hi andar chupe jo jajwat hai,  dekhte hi dil kahe \n wah kya baat hai.. \n wah kya baat hai... \n 💖💖💖💖💖💖💖`,
+    image: require("../../../public/images/home/1.jpg"),
+  },
+  {
+    id: 6,
+    author: "Oendrila Das",
+    content: `u r really osm 😌 photography niye blte suru krle ses hbe na ❤ akta choto jinis k ki vabbe futiye tulte hy photographyr sahaje seta tmi khub vlo kore jno 😌 r o vlo jayega te jao ata e asa kori`,
+    image: require("../../../public/images/home/2.jpg"),
+  },
+  {
+    id: 7,
+    author: "Mridul Chandra Paul",
+    content: `Great work bro..\nYour every shot is very realistic. \nwe are beside you every time.\nGod bless you.\nwork hard & all the best for your aim.`,
+    image: require("../../../public/images/home/3.jpg"),
+  },
 ];
 
-const TestimonialsSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const changeTestimonial = useCallback(
-    (newIndex: any) => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex(
-          typeof newIndex === "function" ? newIndex(currentIndex) : newIndex
-        );
-        setIsAnimating(false);
-      }, 500); // Match this with the CSS transition time
-    },
-    [currentIndex]
-  );
+const FacebookReviewsCarousel = () => {
+  const [currentReview, setCurrentReview] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      changeTestimonial((prevIndex: any) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 7000); // Change slide every 7 seconds
+    const timer = setInterval(() => {
+      setCurrentReview((prevReview) => (prevReview + 1) % reviews.length);
+    }, 5000); // Change review every 5 seconds
 
-    return () => clearInterval(interval);
-  }, [changeTestimonial]);
+    return () => clearInterval(timer);
+  }, []);
 
   const goToPrevious = () => {
-    changeTestimonial((prevIndex: any) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    setCurrentReview(
+      (prevReview) => (prevReview - 1 + reviews.length) % reviews.length
     );
   };
 
   const goToNext = () => {
-    changeTestimonial((prevIndex: any) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentReview((prevReview) => (prevReview + 1) % reviews.length);
   };
 
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="container mx-auto px-8">
-        <Heading title="What Our Clients Say" />
-
-        <div className="relative max-w-6xl mx-auto">
-          <div className="flex items-center">
-            <button
-              onClick={goToPrevious}
-              className="absolute left-0 z-10 bg-transparent rounded-full p-2 shadow-sm hover:shadow-lg transition-colors"
-              aria-label="Previous"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
+    <section className="container w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <style jsx>{`
+        @keyframes blink {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
+        }
+        .blink {
+          animation: blink 0.3s ease-in-out;
+        }
+        .review-content {
+          white-space: pre-line;
+        }
+      `}</style>
+      <div className="p-4">
+        <div className="text-center">
+          <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+            Testimonials
+          </h2>
+          <Heading title="Facebook Reviews" />
+        </div>
+        <div className="relative h-[60vh]">
+          {reviews.map((review, index) => (
             <div
-              className={`flex-1 flex flex-col md:flex-row items-center transition-opacity duration-500 ${
-                isAnimating ? "opacity-0" : "opacity-100"
+              key={review.id}
+              className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
+                index === currentReview ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div className="w-full md:w-1/3 mb-8 md:mb-0">
-                <div className="relative w-74 h-[60vh] mx-auto overflow-hidden rounded-sm shadow-lg">
-                  <Image
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
-                    layout="fill"
-                    objectFit="cover"
-                  />
+              <div className="bg-gray-100 p-4 h-full flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3 h-full border">
+                  <div className="relative h-full flex flex-col justify-center items-center">
+                    <Image
+                      src={review.image}
+                      alt={`${review.author}'s profile`}
+                      className="transition-opacity duration-1000"
+                      objectFit="cover"
+                      fill
+                    />
+                  </div>
+                </div>
+                <div className="w-full md:w-2/3">
+                  <p className="text-gray-800 italic mb-2 text-justify review-content">{`"${review.content}"`}</p>
+                  <div className="h-16" />
+                  <p className="font-semibold text-gray-700 text-end">
+                    {`- ${review.author}`}
+                  </p>
                 </div>
               </div>
-              <div className="w-full md:w-2/3 md:pl-12">
-                <blockquote className="text-sm italic mb-4 text-gray-500 text-justify">
-                  {testimonials[currentIndex].text}
-                </blockquote>
-                <p className="font-semibold text-right text-gray-600">
-                  - {testimonials[currentIndex].name}
-                </p>
-              </div>
             </div>
-            <button
-              onClick={goToNext}
-              className="absolute right-0 z-10 bg-transparent rounded-full p-2 shadow-sm hover:shadow-lg transition-colors"
-              aria-label="Next"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
+          ))}
         </div>
+        <div className="flex justify-between mt-4">
+          <button
+            onClick={goToPrevious}
+            className="text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline"
+          >
+            <ChevronLeft size={24} color="#2563eb" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="text-white font-bold py-1 px-4 focus:outline-none focus:shadow-outline"
+          >
+            <ChevronRight size={24} color="#2563eb" />
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-center pb-4">
+        {reviews.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full mx-1 focus:outline-none ${
+              index === currentReview ? "bg-blue-600" : "bg-gray-300"
+            }`}
+            onClick={() => setCurrentReview(index)}
+          />
+        ))}
+      </div>
+      <div className="flex justify-center pb-6">
+        <a
+          href="https://www.facebook.com/tanmoyphotography93/reviews"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline flex items-center"
+        >
+          View All Reviews on Facebook
+          <ExternalLink size={18} className="ml-2" />
+        </a>
       </div>
     </section>
   );
 };
 
-export default TestimonialsSlider;
+export default FacebookReviewsCarousel;

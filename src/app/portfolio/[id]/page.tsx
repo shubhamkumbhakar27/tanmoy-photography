@@ -220,7 +220,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <Navbar selectedLabel="portfolio" />
+      <Navbar selectedLabel="Portfolio" />
       <div className="h-40" />
       <div className="container mx-auto px-4" id="portfolio">
         <Heading title={PORTFOLIO_MAP.get(params.id)?.heading} />
