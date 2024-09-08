@@ -7,176 +7,52 @@ import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import clsx from "clsx";
 const WEDDING = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/2.jpg"),
-  },
-  {
-    id: 2,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/3.jpg"),
-  },
-  {
-    id: 3,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/4.jpg"),
-  },
-  {
-    id: 4,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/5.jpg"),
-  },
+  require("../../../../public/images/wedding/1.jpg"),
+  require("../../../../public/images/wedding/2.jpg"),
+  require("../../../../public/images/wedding/3.jpg"),
+  require("../../../../public/images/wedding/4.jpg"),
+  require("../../../../public/images/wedding/5.jpg"),
+  require("../../../../public/images/wedding/6.jpg"),
+  require("../../../../public/images/wedding/7.jpg"),
+  require("../../../../public/images/wedding/8.jpg"),
+  require("../../../../public/images/wedding/9.jpg"),
+  require("../../../../public/images/wedding/10.jpg"),
+  require("../../../../public/images/wedding/11.jpg"),
+  require("../../../../public/images/wedding/12.jpg"),
+  require("../../../../public/images/wedding/13.jpg"),
+  require("../../../../public/images/wedding/14.jpg"),
+  require("../../../../public/images/wedding/15.jpg"),
+  require("../../../../public/images/wedding/16.jpg"),
+  require("../../../../public/images/wedding/17.jpg"),
+  require("../../../../public/images/wedding/18.jpg"),
 ];
 
 const PRE_WEDDING = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/1.jpg"),
-  },
-  {
-    id: 2,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/2.jpg"),
-  },
-  {
-    id: 3,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/3.jpg"),
-  },
-  {
-    id: 4,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/4.jpg"),
-  },
-  {
-    id: 5,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/5.jpg"),
-  },
-  {
-    id: 6,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/6.jpg"),
-  },
-  {
-    id: 7,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/7.jpg"),
-  },
-  {
-    id: 8,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/8.jpg"),
-  },
-  {
-    id: 9,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/9.jpg"),
-  },
-  {
-    id: 10,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/10.png"),
-  },
-  {
-    id: 11,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/11.jpg"),
-  },
-  {
-    id: 12,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/12.jpg"),
-  },
-  {
-    id: 13,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/13.jpg"),
-  },
-  {
-    id: 14,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/14.jpg"),
-  },
-  {
-    id: 15,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/15.jpg"),
-  },
-  {
-    id: 16,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/16.jpg"),
-  },
-  {
-    id: 17,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/17.jpg"),
-  },
-  {
-    id: 18,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/18.jpg"),
-  },
-  {
-    id: 19,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/19.jpg"),
-  },
-  {
-    id: 20,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/pre-wedding/20.jpg"),
-  },
+  require("../../../../public/images/wedding/1.jpg"),
+  require("../../../../public/images/wedding/2.jpg"),
+  require("../../../../public/images/wedding/3.jpg"),
+  require("../../../../public/images/wedding/4.jpg"),
+  require("../../../../public/images/wedding/5.jpg"),
+  require("../../../../public/images/wedding/6.jpg"),
+  require("../../../../public/images/wedding/7.jpg"),
+  require("../../../../public/images/wedding/8.jpg"),
+  require("../../../../public/images/wedding/9.jpg"),
+  require("../../../../public/images/wedding/10.jpg"),
 ];
 
 const EDITORIAL = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/2.jpg"),
-  },
+  require("../../../../public/images/wedding/1.jpg"),
+  require("../../../../public/images/wedding/2.jpg"),
+  require("../../../../public/images/wedding/3.jpg"),
 ];
 
-const BABY_SHOOT = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/2.jpg"),
-  },
-];
-const FASHION = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/2.jpg"),
-  },
-];
+const BABY_SHOOT = [require("../../../../public/images/wedding/1.jpg")];
+const FASHION = [require("../../../../public/images/wedding/1.jpg")];
 
-const MATERNITY_SHOOT = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/2.jpg"),
-  },
-];
-const ENGAGEMENT = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/2.jpg"),
-  },
-];
+const MATERNITY_SHOOT = [require("../../../../public/images/wedding/1.jpg")];
+const ENGAGEMENT = [require("../../../../public/images/wedding/1.jpg")];
 
-const PRODUCT_SHOOT = [
-  {
-    id: 1,
-    title: "Tanmoy & Suchismita",
-    image_src: require("../../../../public/images/portfolio/2.jpg"),
-  },
-];
+const PRODUCT_SHOOT = [require("../../../../public/images/wedding/1.jpg")];
 
 const PORTFOLIO_MAP = new Map();
 
@@ -255,7 +131,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
                   onClick={() => setSelectedImageIndex(index)}
                 >
                   <Image
-                    src={image.image_src}
+                    src={image}
                     alt={`Portfolio image ${index + 1}`}
                     layout="fill"
                     objectFit="cover"
@@ -273,10 +149,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
           >
             <div className="max-w-4xl max-h-full p-4">
               <Image
-                src={
-                  PORTFOLIO_MAP.get(params.id)?.images[selectedImageIndex]
-                    .image_src
-                }
+                src={PORTFOLIO_MAP.get(params.id)?.images[selectedImageIndex]}
                 alt="Selected portfolio image"
                 width={1200}
                 height={800}
