@@ -7,21 +7,21 @@ const blogs = [
     title: "Blog 1",
     author: "Tanmoy",
     excerpt: "This is the first blog post.",
-    thumbnailUrl: require("../../../public/images/portfolio/2.jpg"),
+    thumbnailUrl: require("../../../public/images/home/2.jpg"),
   },
   {
     url: "https://www.facebook.com/tanmoyphotography93",
     title: "Blog 2",
     author: "Tanmoy",
     excerpt: "This is the second blog post.",
-    thumbnailUrl: require("../../../public/images/portfolio/3.jpg"),
+    thumbnailUrl: require("../../../public/images/home/3.jpg"),
   },
   {
     url: "https://www.facebook.com/tanmoyphotography93",
     title: "Blog 3",
     author: "Tanmoy",
     excerpt: "This is the third blog post.",
-    thumbnailUrl: require("../../../public/images/portfolio/4.jpg"),
+    thumbnailUrl: require("../../../public/images/home/4.jpg"),
   },
 ];
 
