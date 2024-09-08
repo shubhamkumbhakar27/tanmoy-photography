@@ -19,6 +19,7 @@ const images = [
   require("../../../public/images/home/14.jpg"),
   require("../../../public/images/home/15.jpg"),
   require("../../../public/images/home/16.jpg"),
+  require("../../../public/images/home/17.jpg"),
 ];
 
 export const HomePage = () => {
@@ -43,7 +44,7 @@ export const HomePage = () => {
               src={image}
               alt={`image ${index + 1}`}
               fill
-              objectFit={"contain"}
+              objectFit="cover"
               className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
