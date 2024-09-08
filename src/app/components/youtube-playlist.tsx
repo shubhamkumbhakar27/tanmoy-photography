@@ -40,7 +40,7 @@ const YouTubePlaylistGallery = ({ playlist }: any) => {
   if (!playlist) return null;
   return (
     <>
-      <div className="container mx-auto px-4 py-8 border">
+      <div className="container mx-auto px-4 py-8 shadow-lg">
         <div className="flex flex-col-reverse md:flex-row gap-6">
           <div className="md:w-1/3 bg-white rounded-lg shadow-md overflow-hidden">
             <h3 className="text-xl font-semibold p-4 border-b">

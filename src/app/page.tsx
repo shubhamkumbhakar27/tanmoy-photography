@@ -1,5 +1,4 @@
 import About from "./components/about";
-import Footer from "./components/footer";
 import GetQuote from "./components/get-quote";
 import { HomePage } from "./components/home";
 import Navbar from "./components/navbar";
@@ -15,7 +14,6 @@ export default function Home() {
       <SignatureWork />
       <Testimonials />
       <GetQuote />
-      <Footer />
     </>
   );
 }

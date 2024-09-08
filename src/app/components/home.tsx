@@ -36,7 +36,7 @@ export const HomePage = () => {
   return (
     <div>
       <main className="container mx-auto px-4 md:p-0" id="home">
-        <div className="h-40" />
+        <div className="h-32" />
         <div className="relative min-h-[40vh] md:min-h-[75vh] overflow-hidden">
           {images.map((image: string, index: number) => (
             <Image
@@ -44,7 +44,7 @@ export const HomePage = () => {
               src={image}
               alt={`image ${index + 1}`}
               fill
-              objectFit="cover"
+              objectFit="contain"
               className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}

@@ -112,12 +112,23 @@ const PRE_WEDDING = [
 ];
 
 const EDITORIAL = [
-  require("../../../../public/images/wedding/1.jpg"),
-  require("../../../../public/images/wedding/2.jpg"),
-  require("../../../../public/images/wedding/3.jpg"),
+  require("../../../../public/images/signature/editorial.jpg"),
 ];
 
-const BABY_SHOOT = [require("../../../../public/images/wedding/1.jpg")];
+const BABY_SHOOT = [
+  require("../../../../public/images/baby-shoot/1.jpg"),
+  require("../../../../public/images/baby-shoot/2.jpg"),
+  require("../../../../public/images/baby-shoot/3.jpg"),
+  require("../../../../public/images/baby-shoot/4.jpg"),
+  require("../../../../public/images/baby-shoot/5.jpg"),
+  require("../../../../public/images/baby-shoot/6.jpg"),
+  require("../../../../public/images/baby-shoot/7.jpg"),
+  require("../../../../public/images/baby-shoot/12.jpg"),
+  require("../../../../public/images/baby-shoot/8.jpg"),
+  require("../../../../public/images/baby-shoot/9.jpg"),
+  require("../../../../public/images/baby-shoot/10.jpg"),
+  require("../../../../public/images/baby-shoot/11.jpg"),
+];
 const FASHION = [require("../../../../public/images/wedding/1.jpg")];
 
 const MATERNITY_SHOOT = [require("../../../../public/images/wedding/1.jpg")];
@@ -175,7 +186,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
           className={clsx(
             " grid h-[200vh] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
             {
-              "h-[70vh] grid-cols-1":
+              "h-[70vh] grid-cols-1 lg:grid-cols-1":
                 PORTFOLIO_MAP.get(params.id)?.images.length < 4,
             },
             {
@@ -192,7 +203,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
             }
           )}
         >
-          {PORTFOLIO_MAP.get(params.id)?.images.map(
+          {shuffleArray(PORTFOLIO_MAP.get(params.id)?.images || []).map(
             (image: any, index: number) => {
               const size = randomSizes[index];
               return (
@@ -245,7 +256,6 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
         )}
       </div>
       <div className="h-16" />
-      <Footer />
     </>
   );
 };
@@ -256,6 +266,14 @@ function getRandomSizeArray(n: number) {
     { length: n },
     () => sizes[Math.floor(Math.random() * sizes.length)]
   );
+}
+
+function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+  }
+  return array;
 }
 
 export default Portfolio;

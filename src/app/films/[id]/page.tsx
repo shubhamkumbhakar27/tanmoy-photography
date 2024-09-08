@@ -298,7 +298,6 @@ export default function Films({ params }: { params: { id: string } }) {
       <VideoGridWithModal videos={FILMS_MAP.get(params.id)?.videos} />
       <YouTubePlaylistGallery playlist={FILMS_MAP.get(params.id)?.playlist} />
       <div className="h-16" />
-      <Footer />
     </>
   );
 }
