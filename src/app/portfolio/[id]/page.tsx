@@ -175,6 +175,10 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
           className={clsx(
             " grid h-[200vh] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
             {
+              "h-[70vh] grid-cols-1":
+                PORTFOLIO_MAP.get(params.id)?.images.length < 4,
+            },
+            {
               "h-[400vh]": PORTFOLIO_MAP.get(params.id)?.images.length > 15,
             },
             {
