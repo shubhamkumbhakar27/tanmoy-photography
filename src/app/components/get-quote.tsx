@@ -145,7 +145,7 @@ const GetQuote = () => {
                 id="country_code"
                 value={formData.country_code}
                 onChange={handleChange}
-                className="mt-1 block border border-gray-30 rounded-md md:rounded-l-md shadow-sm p-1 outline-none"
+                className="mt-1 block border border-gray-30 rounded-md md:rounded-r-none shadow-sm p-1 outline-none"
               >
                 {countryCodes.map((country) => (
                   <option key={country.country} value={country.code}>
@@ -161,7 +161,7 @@ const GetQuote = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full border border-gray-300 rounded-md md:rounded-r-md shadow-sm py-2 px-3 outline-none"
+                className="mt-1 block w-full border border-gray-300 rounded-md md:rounded-l-none shadow-sm py-2 px-3 outline-none"
               />
             </div>
           </div>
