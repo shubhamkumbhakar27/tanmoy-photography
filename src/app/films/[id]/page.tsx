@@ -1,4 +1,3 @@
-import Footer from "@/app/components/footer";
 import Heading from "@/app/components/heading";
 import Navbar from "@/app/components/navbar";
 import VideoGridWithModal from "@/app/components/video-grid";
@@ -8,269 +7,147 @@ const PRE_WEDDING_PLAYLIST = [
   {
     id: 1,
     title: "TANMOY X SUCHISMITA | PRE WEDDING VARANASI",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
     description: "Tanmoy & Suchismita",
     youtubeId: "Tl9aio7WOxE",
   },
   {
     id: 2,
     title: "True Love Stories 💞❤ || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
     description: "Sanjeev & Pallabi",
     youtubeId: "fo1aK9He9-U",
   },
   {
     id: 3,
     title: "WINTER LOVE STORY 💓💕 || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/0A1HA9UDBHo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDhJgJ__lObLCBAmPsHUJkjbelwsw",
     description: "Pritam & Tanaya ",
     youtubeId: "0A1HA9UDBHo",
   },
   {
     id: 4,
-    title: "TANMOY X SUCHISMITA | PRE WEDDING VARANASI",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "Tl9aio7WOxE",
+    title: "ভালোবাসার শহর | Pre wedding Kolkata",
+    description: "Koustab & Koyel",
+    youtubeId: "KY3Mr7jdThw",
   },
   {
     id: 5,
-    title: "True Love Stories 💞❤ || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/nFgsBxw-zWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCubGT7fd2WcazvquL2Zd2eISaovA",
-    description: "Sanjeev & Pallabi",
-    youtubeId: "fo1aK9He9-U",
+    title: "A MOMENT OF LOVE 💕 | PRE WEDDING 2020",
+    description: "Swapnil & Chitra",
+    youtubeId: "h7pVhOSKkhg",
   },
   {
     id: 6,
-    title: "WINTER LOVE STORY 💓💕 || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Pritam & Tanaya ",
-    youtubeId: "0A1HA9UDBHo",
+    title: "Pre Wedding Kolkata 2019",
+    description: "Prerana & Prabal",
+    youtubeId: "rfKvEeMvoQQ",
   },
   {
     id: 7,
-    title: "WEDDING FILM 2023 | KIRAN & ...",
-    thumbnail:
-      "https://i.ytimg.com/vi/nFgsBxw-zWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCubGT7fd2WcazvquL2Zd2eISaovA",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "0n7AWxYCj9I",
-  },
-  {
-    id: 8,
-    title:
-      "Chuttamalle | Devara Second Single | NTR | Janhvi Kapoor | Anirudh Ravichander | Shilpa Rao | 27 Sep",
-    thumbnail:
-      "https://i.ytimg.com/vi/nFgsBxw-zWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCubGT7fd2WcazvquL2Zd2eISaovA",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
-  },
-  {
-    id: 9,
-    title: "DESTINATION WEDDING FILM J...",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
-  },
-  {
-    id: 10,
-    title: "WEDDING FILM 2022 | SUKHMAN...",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
-  },
-  {
-    id: 11,
-    title: "DESTINATION WEDDING FILM | ...",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
+    title: "Pre Wedding Kolkata 2021",
+    description: "Suman & Moumita",
+    youtubeId: "r6mnS-f-9og",
   },
 ];
 
 const PRE_WEDDING_VIDEOS = [
   {
+    id: "2",
+    title: "A MOMENT OF LOVE 💕",
+    youtubeId: "NoNNKjSjp9A",
+  },
+  {
     id: "1",
     title: "Wedding Highlight 2023",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "Tl9aio7WOxE",
   },
-  {
-    id: "2",
-    title: "Beach Wedding",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    youtubeId: "dQw4w9WgXcQ",
-  },
+
   {
     id: "3",
-    title: "Mountain Elopement",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    youtubeId: "dQw4w9WgXcQ",
+    title: "DEBOJYOTI X DOYEL",
+    youtubeId: "-raje0s5ZR8",
   },
   {
     id: "4",
-    title: "Rustic Barn Ceremony",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "KY3Mr7jdThw",
   },
   {
     id: "5",
-    title: "Urban Rooftop Wedding",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "r6mnS-f-9og",
   },
   {
     id: "6",
-    title: "Destination Wedding in Bali",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "ZHdphEtdmeU",
   },
 ];
 
 const WEDDING_PLAYLIST = [
   {
     id: 1,
-    title: "TANMOY X SUCHISMITA | PRE WEDDING VARANASI",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "Tl9aio7WOxE",
+    title: "Two People One Feeling 💓 | Bengali Cinematic Wedding Teaser",
+    description: "Saptarsi & Madhurima",
+    youtubeId: "RKMng9vJI4U",
   },
   {
     id: 2,
-    title: "True Love Stories 💞❤ || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    description: "Sanjeev & Pallabi",
-    youtubeId: "fo1aK9He9-U",
+    title: "The Wedding Teaser of Plabani 💗 Arghya",
+    description: "Plabani & Arghya",
+    youtubeId: "uK4FFUZBP8E",
   },
   {
     id: 3,
-    title: "WINTER LOVE STORY 💓💕 || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/0A1HA9UDBHo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDhJgJ__lObLCBAmPsHUJkjbelwsw",
-    description: "Pritam & Tanaya ",
-    youtubeId: "0A1HA9UDBHo",
+    title: "Suman & Sweety Bengali Cinematic Wedding Teaser",
+    description: "Suman & Sweety",
+    youtubeId: "Dy3VQVkexXU",
   },
   {
     id: 4,
-    title: "TANMOY X SUCHISMITA | PRE WEDDING VARANASI",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "Tl9aio7WOxE",
+    title: "Tumi jodi chao | Bengali Cinematic Wedding Teaser",
+    description: "Anjan & Sisshyparna",
+    youtubeId: "BWT8vdf8Dnk",
   },
   {
     id: 5,
-    title: "True Love Stories 💞❤ || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/nFgsBxw-zWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCubGT7fd2WcazvquL2Zd2eISaovA",
-    description: "Sanjeev & Pallabi",
-    youtubeId: "fo1aK9He9-U",
+    title: "TRUELY MEANT TO BE || Anupam 💕 Dipkanya ",
+    description: "Anupam & Dipkanya",
+    youtubeId: "B0J_4dVgSJc",
   },
   {
     id: 6,
-    title: "WINTER LOVE STORY 💓💕 || Pre Wedding 2021",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Pritam & Tanaya ",
-    youtubeId: "0A1HA9UDBHo",
+    title: "Bengali Cinematic Wedding teaser || Rintu 💕 Sangita",
+    description: "Rintu & Sangita",
+    youtubeId: "5mItjnGYLaA",
   },
   {
     id: 7,
-    title: "WEDDING FILM 2023 | KIRAN & ...",
-    thumbnail:
-      "https://i.ytimg.com/vi/nFgsBxw-zWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCubGT7fd2WcazvquL2Zd2eISaovA",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "0n7AWxYCj9I",
-  },
-  {
-    id: 8,
-    title:
-      "Chuttamalle | Devara Second Single | NTR | Janhvi Kapoor | Anirudh Ravichander | Shilpa Rao | 27 Sep",
-    thumbnail:
-      "https://i.ytimg.com/vi/nFgsBxw-zWQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCubGT7fd2WcazvquL2Zd2eISaovA",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
-  },
-  {
-    id: 9,
-    title: "DESTINATION WEDDING FILM J...",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
-  },
-  {
-    id: 10,
-    title: "WEDDING FILM 2022 | SUKHMAN...",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
-  },
-  {
-    id: 11,
-    title: "DESTINATION WEDDING FILM | ...",
-    thumbnail:
-      "https://i.ytimg.com/vi/5vsOv_bcnhs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBp1P6yhNNRC0mEe7ZF34JjMaW5qQ",
-    description: "Tanmoy & Suchismita",
-    youtubeId: "5vsOv_bcnhs",
+    title: "Sajani Sajani | Cinematic Bengali Wedding Teaser",
+    description: "Varun & Kuheli",
+    youtubeId: "dZ09lDh5hQs",
   },
 ];
 
 const WEDDING_VIDEOS = [
   {
     id: "1",
-    thumbnail:
-      "https://i.ytimg.com/vi/Kq_Tc_kjRb4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgUxG9hZepw1pGTQIBKpYSudFtxw",
-    youtubeId: "Kq_Tc_kjRb4",
+    youtubeId: "SGG8WxXsplo",
   },
   {
     id: "2",
-    thumbnail:
-      "https://i.ytimg.com/an_webp/e3zM984QLfM/mqdefault_6s.webp?du=3000&sqp=CMG407YG&rs=AOn4CLC5aj8UjRJjJvSOMdVeKdh-G2xosg",
-    youtubeId: "e3zM984QLfM",
+    youtubeId: "Kq_Tc_kjRb4",
   },
   {
     id: "3",
-    thumbnail:
-      "https://i.ytimg.com/an_webp/Onp4_8L31po/mqdefault_6s.webp?du=3000&sqp=CLLG07YG&rs=AOn4CLBUpbyzfpXcalozQ6f-Sq5Y_YsOBA",
-    youtubeId: "Onp4_8L31po",
+    youtubeId: "BWT8vdf8Dnk",
   },
   {
     id: "4",
-    thumbnail:
-      "https://i.ytimg.com/vi/Tl9aio7WOxE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAU79b5SoC6e_aWbFcTiQdcJZOh0Q",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "fP8uDV13pa4",
   },
   {
     id: "5",
-    title: "Urban Rooftop Wedding",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "JtXLpxlUy68",
   },
   {
     id: "6",
-    title: "Destination Wedding in Bali",
-    thumbnail:
-      "https://i.ytimg.com/vi/fo1aK9He9-U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC19ELHZI1Ol7iM25bCVQOHoaOhcg",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "KQOmzlHAmzE",
   },
 ];
 

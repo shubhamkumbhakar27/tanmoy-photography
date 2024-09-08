@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const PlaylistItem = ({
   title,
-  thumbnail,
   description,
+  youtubeId,
   isActive,
   onClick,
 }: any) => (
@@ -17,7 +17,7 @@ const PlaylistItem = ({
   >
     <div className="w-1/4">
       <Image
-        src={thumbnail}
+        src={`https://img.youtube.com/vi/${youtubeId}/0.jpg`}
         alt={title}
         width={120}
         height={68}
@@ -35,7 +35,6 @@ const PlaylistItem = ({
 
 const YouTubePlaylistGallery = ({ playlist }: any) => {
   const [activeVideo, setActiveVideo] = useState(playlist[0]);
-  const [allowAutoplay, setAllowAutoplay] = useState(false);
 
   if (!playlist) return null;
   return (
@@ -54,7 +53,6 @@ const YouTubePlaylistGallery = ({ playlist }: any) => {
                   isActive={video.id === activeVideo.id}
                   onClick={() => {
                     setActiveVideo(video);
-                    setAllowAutoplay(true);
                   }}
                 />
               ))}
@@ -63,9 +61,7 @@ const YouTubePlaylistGallery = ({ playlist }: any) => {
           <div className="md:w-2/3 h-[250px] md:h-[420px] my-auto">
             <div className="aspect-16/9 h-full">
               <iframe
-                src={`https://www.youtube.com/embed/${activeVideo.youtubeId}${
-                  allowAutoplay ? "?autoplay=1" : ""
-                }`}
+                src={`https://www.youtube.com/embed/${activeVideo.youtubeId}?autoplay=1`}
                 title={activeVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

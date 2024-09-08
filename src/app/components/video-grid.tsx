@@ -4,20 +4,20 @@ import React, { useState } from "react";
 import { Play } from "lucide-react";
 import Image from "next/image";
 
-const VideoThumbnail = ({ title, thumbnail, onPlay }: any) => (
-  <div className="relative group cursor-pointer aspect-video" onClick={onPlay}>
+const VideoThumbnail = ({ title, youtubeId, onPlay }: any) => (
+  <div className="relative group cursor-pointer aspect-[19/9]" onClick={onPlay}>
     <Image
-      src={thumbnail}
+      src={`https://img.youtube.com/vi/${youtubeId}/0.jpg`}
       alt={title}
-      className="w-full h-auto shadow-md"
-      fill
+      layout="fill"
+      objectFit="cover"
+      className="shadow-lg"
     />
     <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-300">
       <div className="bg-black bg-opacity-10 border border-gray-300 rounded-full p-4">
         <Play className="text-gray-200" size={32} />
       </div>
     </div>
-    <h3 className="mt-2 text-lg font-semibold text-gray-800">{title}</h3>
   </div>
 );
 
@@ -30,7 +30,7 @@ const Modal = ({ isOpen, onClose, children }: any) => {
         className="absolute inset-0 bg-black opacity-75"
         onClick={onClose}
       ></div>
-      <div className="z-10 rounded-lg max-w-3xl w-full mx-4">
+      <div className="z-10 rounded-lg max-w-6xl w-full mx-4">
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
           onClick={onClose}
@@ -69,11 +69,11 @@ const VideoGridWithModal = ({ videos }: any) => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {videos.map((video: any) => (
           <VideoThumbnail
             key={video.id}
-            {...video}
+            youtubeId={video.youtubeId}
             onPlay={() => openModal(video)}
           />
         ))}
@@ -82,7 +82,7 @@ const VideoGridWithModal = ({ videos }: any) => {
         {selectedVideo && (
           <div className="aspect-video">
             <iframe
-              src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1&controls=0`}
               title={selectedVideo.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

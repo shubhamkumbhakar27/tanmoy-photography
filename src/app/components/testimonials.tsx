@@ -96,7 +96,7 @@ const FacebookReviewsCarousel = () => {
           </h2>
           <Heading title="Facebook Reviews" />
         </div>
-        <div className="relative h-[60vh]">
+        <div className="relative h-[80vh] md:h-[60vh]">
           {reviews.map((review, index) => (
             <div
               key={review.id}
@@ -104,7 +104,7 @@ const FacebookReviewsCarousel = () => {
                 index === currentReview ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div className="bg-gray-100 p-4 h-[60vh] overflow-scroll flex flex-col md:flex-row items-center gap-8">
+              <div className="bg-gray-100 p-4 h-[80vh] md:h-[60vh] flex flex-col md:flex-row items-center gap-8">
                 <div className="w-full md:w-1/3 h-full">
                   <div className="relative h-full flex flex-col justify-center items-center">
                     <Image
