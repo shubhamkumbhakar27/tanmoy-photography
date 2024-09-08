@@ -51,31 +51,40 @@ const PRE_WEDDING_PLAYLIST = [
 const PRE_WEDDING_VIDEOS = [
   {
     id: "2",
-    title: "A MOMENT OF LOVE 💕",
-    youtubeId: "NoNNKjSjp9A",
+    youtubeId: "0A1HA9UDBHo",
   },
   {
     id: "1",
-    title: "Wedding Highlight 2023",
-    youtubeId: "Tl9aio7WOxE",
+    youtubeId: "h7pVhOSKkhg",
   },
 
   {
     id: "3",
-    title: "DEBOJYOTI X DOYEL",
-    youtubeId: "-raje0s5ZR8",
+    youtubeId: "ZHdphEtdmeU",
   },
   {
     id: "4",
-    youtubeId: "KY3Mr7jdThw",
+    youtubeId: "IVUyn1npJfw",
   },
   {
     id: "5",
-    youtubeId: "r6mnS-f-9og",
+    youtubeId: "Du0-BbpmXh0",
   },
   {
     id: "6",
-    youtubeId: "ZHdphEtdmeU",
+    youtubeId: "DP4N6EFvusg",
+  },
+  {
+    id: "7",
+    youtubeId: "1SgzEBoAuXI",
+  },
+  {
+    id: "8",
+    youtubeId: "FAnGqc3YYfM",
+  },
+  {
+    id: "9",
+    youtubeId: "chfNSgxodBk",
   },
 ];
 
@@ -164,6 +173,10 @@ const WEDDING_VIDEOS = [
   {
     id: "10",
     youtubeId: "Z-qll-h2yjQ",
+  },
+  {
+    id: "11",
+    youtubeId: "EFimEDiGnxo",
   },
 ];
 
