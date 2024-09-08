@@ -104,8 +104,8 @@ const FacebookReviewsCarousel = () => {
                 index === currentReview ? "opacity-100" : "opacity-0"
               }`}
             >
-              <div className="bg-gray-100 p-4 h-full flex flex-col md:flex-row items-center gap-8">
-                <div className="w-full md:w-1/3 h-full border">
+              <div className="bg-gray-100 p-4 h-[60vh] overflow-scroll flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3 h-full">
                   <div className="relative h-full flex flex-col justify-center items-center">
                     <Image
                       src={review.image}
@@ -117,11 +117,7 @@ const FacebookReviewsCarousel = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-2/3">
-                  <p className="text-gray-800 italic px-1 text-justify review-content">{`"${
-                    review.content.length > 300
-                      ? review.content.slice(0, 250) + "..."
-                      : review.content
-                  }"`}</p>
+                  <p className="text-gray-800 italic px-1 text-justify review-content">{`"${review.content}"`}</p>
                   <div className="h-16" />
                   <p className="font-semibold text-gray-700 text-end">
                     {`- ${review.author}`}
