@@ -170,7 +170,7 @@ export default function Films({ params }: { params: { id: string } }) {
   return (
     <>
       <Navbar selectedLabel="Films" />
-      <div className="h-40" />
+      <div className="h-32" />
       <Heading title={FILMS_MAP.get(params.id)?.heading} />
       <VideoGridWithModal videos={FILMS_MAP.get(params.id)?.videos} />
       <YouTubePlaylistGallery playlist={FILMS_MAP.get(params.id)?.playlist} />

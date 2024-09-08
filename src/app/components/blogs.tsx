@@ -30,6 +30,7 @@ export default function Blogs() {
   return (
     <>
       <Navbar selectedLabel="Blogs" />
+      <div className="h-32" />
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <Heading title="Blog Posts" />
