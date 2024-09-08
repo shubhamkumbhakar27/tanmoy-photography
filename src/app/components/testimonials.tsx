@@ -117,7 +117,7 @@ const FacebookReviewsCarousel = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-2/3">
-                  <p className="text-gray-800 italic mb-2 text-justify review-content">{`"${review.content}"`}</p>
+                  <p className="text-gray-800 italic px-1 text-justify review-content max-h-[60%] overflow-scroll">{`"${review.content}"`}</p>
                   <div className="h-16" />
                   <p className="font-semibold text-gray-700 text-end">
                     {`- ${review.author}`}
