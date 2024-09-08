@@ -43,6 +43,43 @@ const WEDDING = [
   require("../../../../public/images/wedding/34.jpg"),
   require("../../../../public/images/wedding/35.jpg"),
   require("../../../../public/images/wedding/36.jpg"),
+  require("../../../../public/images/wedding/37.jpg"),
+  require("../../../../public/images/wedding/38.jpg"),
+  require("../../../../public/images/wedding/39.jpg"),
+  require("../../../../public/images/wedding/40.jpg"),
+  require("../../../../public/images/wedding/41.jpg"),
+  require("../../../../public/images/wedding/42.jpg"),
+  require("../../../../public/images/wedding/43.jpg"),
+  require("../../../../public/images/wedding/44.jpg"),
+  require("../../../../public/images/wedding/45.jpg"),
+  require("../../../../public/images/wedding/46.jpg"),
+  require("../../../../public/images/wedding/47.jpg"),
+  require("../../../../public/images/wedding/48.jpg"),
+  require("../../../../public/images/wedding/49.jpg"),
+  require("../../../../public/images/wedding/50.jpg"),
+  require("../../../../public/images/wedding/51.jpg"),
+  require("../../../../public/images/wedding/52.jpg"),
+  require("../../../../public/images/wedding/53.jpg"),
+  require("../../../../public/images/wedding/54.jpg"),
+  require("../../../../public/images/wedding/55.jpg"),
+  require("../../../../public/images/wedding/56.jpg"),
+  require("../../../../public/images/wedding/57.jpg"),
+  require("../../../../public/images/wedding/58.jpg"),
+  require("../../../../public/images/wedding/59.jpg"),
+  require("../../../../public/images/wedding/60.jpg"),
+  require("../../../../public/images/wedding/61.jpg"),
+  require("../../../../public/images/wedding/62.jpg"),
+  require("../../../../public/images/wedding/63.jpg"),
+  require("../../../../public/images/wedding/64.jpg"),
+  require("../../../../public/images/wedding/65.jpg"),
+  require("../../../../public/images/wedding/66.jpg"),
+  require("../../../../public/images/wedding/67.jpg"),
+  require("../../../../public/images/wedding/68.jpg"),
+  require("../../../../public/images/wedding/69.jpg"),
+  require("../../../../public/images/wedding/70.jpg"),
+  require("../../../../public/images/wedding/71.jpg"),
+  require("../../../../public/images/wedding/72.jpg"),
+  require("../../../../public/images/wedding/73.jpg"),
 ];
 
 const PRE_WEDDING = [
@@ -123,6 +160,15 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
             " grid h-[200vh] grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
             {
               "h-[400vh]": PORTFOLIO_MAP.get(params.id)?.images.length > 15,
+            },
+            {
+              "h-[800vh]": PORTFOLIO_MAP.get(params.id)?.images.length > 30,
+            },
+            {
+              "h-[1200vh]": PORTFOLIO_MAP.get(params.id)?.images.length > 45,
+            },
+            {
+              "h-[1400vh]": PORTFOLIO_MAP.get(params.id)?.images.length > 60,
             }
           )}
         >
