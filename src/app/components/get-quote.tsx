@@ -139,13 +139,13 @@ const GetQuote = () => {
             >
               Phone number
             </label>
-            <div className="flex">
+            <div className="flex flex-col md:flex-row">
               <select
                 name="country_code"
                 id="country_code"
                 value={formData.country_code}
                 onChange={handleChange}
-                className="mt-1 block border border-gray-300 rounded-l-md shadow-sm p-1 outline-none"
+                className="mt-1 block border border-gray-30 rounded-md md:rounded-l-md shadow-sm p-1 outline-none"
               >
                 {countryCodes.map((country) => (
                   <option key={country.country} value={country.code}>
@@ -161,7 +161,7 @@ const GetQuote = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full border border-gray-300 rounded-r-md shadow-sm py-2 px-3 outline-none"
+                className="mt-1 block w-full border border-gray-300 rounded-md md:rounded-r-md shadow-sm py-2 px-3 outline-none"
               />
             </div>
           </div>
@@ -213,7 +213,7 @@ const GetQuote = () => {
               {isSubmitting
                 ? "Submitting..."
                 : isSubmitted
-                ? "Submitted, we will reach you soon."
+                ? "Thank you for your interest, we will reach you soon."
                 : "Get Quote"}
             </button>
           </div>
