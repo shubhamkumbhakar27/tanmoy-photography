@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white" id="contact-us">
       <div className="container mx-auto px-4 py-8">
         {/* Logo and Brand */}
         <div className="flex flex-col items-center">
@@ -41,7 +41,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
@@ -79,13 +79,19 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <MapPin size={16} className="mr-2" />
-                <span>Tollygunge, Asansol, India, 700040</span>
+                <a
+                  href="https://maps.app.goo.gl/yCUKmiYN1L2ytxAJ6"
+                  target="_blank"
+                  className="hover:text-gray-300"
+                >
+                  Tollygunge, Asansol, India, 700040
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Social Media Links */}
-          <div>
+          <div className="pl-0 md:pl-12">
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a
@@ -117,7 +123,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm">
+        <div className="mt-8 pt-8 border-t border-gray-200 text-center text-xs">
           <p>
             &copy; {new Date().getFullYear()} Tanmoy Photography & Films. All
             rights reserved.

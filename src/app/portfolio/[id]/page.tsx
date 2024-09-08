@@ -203,7 +203,7 @@ const Portfolio = ({ params }: { params: { id: string } }) => {
             }
           )}
         >
-          {shuffleArray(PORTFOLIO_MAP.get(params.id)?.images || []).map(
+          {PORTFOLIO_MAP.get(params.id)?.images.map(
             (image: any, index: number) => {
               const size = randomSizes[index];
               return (
@@ -266,14 +266,6 @@ function getRandomSizeArray(n: number) {
     { length: n },
     () => sizes[Math.floor(Math.random() * sizes.length)]
   );
-}
-
-function shuffleArray(array: any[]) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-    [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
-  }
-  return array;
 }
 
 export default Portfolio;
