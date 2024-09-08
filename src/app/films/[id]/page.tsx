@@ -86,6 +86,14 @@ const PRE_WEDDING_VIDEOS = [
     id: "9",
     youtubeId: "chfNSgxodBk",
   },
+  {
+    id: "10",
+    youtubeId: "XVbLqrcNuJ8",
+  },
+  {
+    id: "11",
+    youtubeId: "yJi6aik3vjs",
+  },
 ];
 
 const WEDDING_PLAYLIST = [
