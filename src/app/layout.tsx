@@ -12,6 +12,18 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Tanmoy Photography & Films",
   description: "Framing the love that leads to forever",
+  viewport: "width=device-width, initial-scale=1",
+  openGraph: {
+    title: "Tanmoy Photography & Films",
+    description: "Framing the love that leads to forever",
+    type: "website",
+    images: [
+      {
+        url: "/images/logo.png",
+      },
+    ],
+  },
+  icons: "/images/logo.png",
 };
 
 export default function RootLayout({
@@ -21,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className}`}>
         <div>{children}</div>
         <Footer />
       </body>
