@@ -24,7 +24,11 @@ const images = [
 
 export const HomePage = () => {
   const [randomNumberInt] = useState(Math.floor(Math.random() * images.length));
-  const [currentImageIndex, setCurrentImageIndex] = useState(randomNumberInt);
+  const [currentImageIndex, setCurrentImageIndex] = useState(
+    Math.floor(Math.random() * images.length)
+  );
+
+  console.log(randomNumberInt, currentImageIndex);
 
   useEffect(() => {
     const interval = setInterval(() => {
