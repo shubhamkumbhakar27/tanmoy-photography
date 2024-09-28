@@ -10,7 +10,7 @@ export default function Document() {
         ></NextScript>
         <NextScript>
           window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
+          {window.dataLayer.push(arguments)}
           gtag(`js`, new Date()); gtag(`config`, `G-D9VHD3FWN6`);
         </NextScript>
       </Head>
