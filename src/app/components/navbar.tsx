@@ -98,7 +98,9 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
                 }}
                 onClick={(e) => {
                   if (selectedLabel && selectedLabel !== item.label) {
-                    router.push("/");
+                    if (item.label !== "Contact") {
+                      router.push("/");
+                    }
                   }
                   e.preventDefault();
                   if (item.scroolToId) {
@@ -164,7 +166,9 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
                   className="text-black hover:bg-white/20 px-3 py-2 rounded-md text-base font-medium flex justify-between items-center cursor-pointer"
                   onClick={(e) => {
                     if (selectedLabel && selectedLabel !== item.label) {
-                      router.push("/");
+                      if (item.label !== "Contact") {
+                        router.push("/");
+                      }
                     }
                     e.preventDefault();
                     if (item.scroolToId) {
