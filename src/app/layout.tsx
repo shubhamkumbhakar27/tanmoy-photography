@@ -25,44 +25,44 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "../../public/images/logo.png" },
+      { url: "../../public/images/logo1230x630.jpg" },
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "16x16",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "192x192",
         type: "image/png",
       },
     ],
     shortcut: [
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "192x192",
         type: "image/png",
       },
     ],
     apple: [
-      { url: "../../public/images/logo.png", type: "image/png" },
+      { url: "../../public/images/logo1230x630.jpg", type: "image/png" },
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "152x152",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "167x167",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "../../public/images/logo1230x630.jpg",
         sizes: "180x180",
         type: "image/png",
       },
