@@ -8,16 +8,14 @@ export default function Document() {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-D9VHD3FWN6"
         ></NextScript>
-        <NextScript
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){ dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-D9VHD3FWN6');
-          `,
-          }}
-        />
+        <NextScript>
+          {`
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+             gtag('config', 'G-D9VHD3FWN6');
+        `}
+        </NextScript>
       </Head>
       <body>
         <Main />
