@@ -19,50 +19,55 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
       },
     ],
   },
   icons: {
     icon: [
-      { url: "../../public/images/logo.png" },
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
+      },
+      {
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "16x16",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "192x192",
         type: "image/png",
       },
     ],
     shortcut: [
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "192x192",
         type: "image/png",
       },
     ],
     apple: [
-      { url: "../../public/images/logo.png", type: "image/png" },
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
+        type: "image/png",
+      },
+      {
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "152x152",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "167x167",
         type: "image/png",
       },
       {
-        url: "../../public/images/logo.png",
+        url: "https://tanmoyphotographyfilms.com/_next/image?url=/_next/static/media/logo.b3ca5dd5.png&w=256&q=75",
         sizes: "180x180",
         type: "image/png",
       },
