@@ -23,17 +23,18 @@ const images = [
 ];
 
 export const HomePage = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(
-    Math.floor(Math.random() * images.length)
-  );
+  const [randomNumberInt] = useState(Math.floor(Math.random() * images.length));
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + randomNumberInt + 1) % images.length
+      );
     }, 2000); // Change image every 2 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [randomNumberInt]);
 
   return (
     <div>
