@@ -10,9 +10,11 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 import Link from "next/link";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(-1);
+  const router = useRouter();
 
   const navItems = [
     { label: "Home", scroolToId: "home" },
@@ -33,7 +35,6 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
         { label: "Pre-wedding", href: "/films/pre-wedding" },
       ],
     },
-    { label: "Blogs", href: "/blogs" },
     { label: "Contact", scroolToId: "contact-us" },
   ];
 
@@ -83,16 +84,9 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
         <div className="hidden md:flex space-x-4">
           {navItems.map((item, index) => (
             <div key={index} className="relative group">
-              <a
-                href={
-                  selectedLabel && selectedLabel !== item.label
-                    ? "/"
-                    : item.dropdownItems || item.scroolToId
-                    ? undefined
-                    : item.href
-                }
+              <div
                 className={clsx(
-                  "text-black hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium flex items-center",
+                  "text-black hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer",
                   {
                     "text-blue-200": selectedLabel === item.label,
                   }
@@ -103,12 +97,10 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
                   }
                 }}
                 onClick={(e) => {
-                  if (selectedLabel) {
-                    return;
+                  if (selectedLabel && selectedLabel !== item.label) {
+                    router.push("/");
                   }
-                  if (!item.href) {
-                    e.preventDefault();
-                  }
+                  e.preventDefault();
                   if (item.scroolToId) {
                     smoothScroll(e, item.scroolToId);
                   }
@@ -121,7 +113,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
                 {item.dropdownItems && (
                   <ChevronDown size={16} className="ml-1" />
                 )}
-              </a>
+              </div>
               {item.dropdownItems && activeDropdown === index && (
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                   <div
@@ -168,22 +160,13 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
           <div className="px-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item, index) => (
               <div key={index}>
-                <a
-                  href={
-                    selectedLabel
-                      ? "/"
-                      : item.dropdownItems || item.scroolToId
-                      ? undefined
-                      : item.href
-                  }
-                  className="text-black hover:bg-white/20 px-3 py-2 rounded-md text-base font-medium flex justify-between items-center"
+                <div
+                  className="text-black hover:bg-white/20 px-3 py-2 rounded-md text-base font-medium flex justify-between items-center cursor-pointer"
                   onClick={(e) => {
-                    if (selectedLabel) {
-                      return;
+                    if (selectedLabel && selectedLabel !== item.label) {
+                      router.push("/");
                     }
-                    if (!item.href) {
-                      e.preventDefault();
-                    }
+                    e.preventDefault();
                     if (item.scroolToId) {
                       smoothScroll(e, item.scroolToId);
                       setIsOpen(false);
@@ -198,7 +181,7 @@ export default function Navbar({ selectedLabel }: { selectedLabel?: string }) {
                   {item.dropdownItems && (
                     <ChevronDown size={16} className="ml-1" />
                   )}
-                </a>
+                </div>
                 {item.dropdownItems && activeDropdown === index && (
                   <div className="pl-4">
                     {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
