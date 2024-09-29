@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -82,25 +83,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9VHD3FWN6"></script>
-                <script>
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-
-                  gtag('config', 'G-D9VHD3FWN6');
-                </script>
-              `,
-          }}
-        />
-      </head>
+      <head></head>
       <body className={`${roboto.className}`}>
         <div>{children}</div>
         <Footer />
+        <GoogleAnalytics gaId="G-D9VHD3FWN6" />
       </body>
     </html>
   );
