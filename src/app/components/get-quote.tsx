@@ -90,10 +90,12 @@ const GetQuote = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            submitted_at: new Date().toISOString(),
+          }),
         }
       );
-      console.log("Form submitted:", formData);
       setIsSubmitted(true);
       setFormData({
         name: "",
